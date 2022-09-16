@@ -1,12 +1,13 @@
 void setup() {
+  background (0);
   size(500, 500);  //feel free to change the size
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
   boolean shift = true;
-  for (int y = 0; y <= 500; y += 45) 
+  for (int y = 550; y >= -50; y -= 25) 
   {
-    for (int x = 0; x <= 500; x += 45) 
+    for (int x = -50; x <= 500; x += 40) 
     {
       if (shift == true)
         scale(x + 20 ,y);
@@ -20,8 +21,9 @@ void draw() {
 }
 }
 void scale(int x, int y) {
-  fill(#D12EF2);
-  noStroke();
+  fill((int)(256*Math.random()),(int)(256*Math.random()),(int)(256*Math.random()));
+  g.stroke = true;
   ellipse (x + 20, y + 20, 40, 40);
+  noStroke();
   rect (x, y, 40, 20);
 }
