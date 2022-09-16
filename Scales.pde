@@ -27,3 +27,6 @@ void scale(int x, int y) {
   noStroke();
   rect (x, y, 40, 20);
 }
+
+
+
